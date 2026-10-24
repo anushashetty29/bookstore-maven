@@ -1,0 +1,8 @@
+<header class="site-header">
+  <h1>Online Bookstore</h1>
+  <nav>
+    <a href="${pageContext.request.contextPath}/catalog">Catalog</a>
+    <a href="${pageContext.request.contextPath}/cart">Cart (${empty sessionScope.cart ? 0 : sessionScope.cart.size()})</a>
+  </nav>
+</header>
+<main class="container">
