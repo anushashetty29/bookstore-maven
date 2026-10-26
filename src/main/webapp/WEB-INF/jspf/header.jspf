@@ -1,8 +1,32 @@
+<!-- Fullscreen Background Video (100% natural flow) -->
+<div class="video-bg-container">
+  <video class="video-bg" autoplay loop muted playsinline>
+    <source src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260314_131748_f2ca2a28-fed7-44c8-b9a9-bd9acdd5ec31.mp4" type="video/mp4">
+  </video>
+  <!-- Scroll/Page Tint Layer (blur + 25-30% black) -->
+  <div class="video-tint-overlay" id="tintOverlay"></div>
+</div>
+
+<!-- Transparent Floating Navigation -->
 <header class="site-header">
-  <h1>Online Bookstore</h1>
-  <nav>
-    <a href="${pageContext.request.contextPath}/catalog">Catalog</a>
-    <a href="${pageContext.request.contextPath}/cart">Cart (${empty sessionScope.cart ? 0 : sessionScope.cart.size()})</a>
-  </nav>
+  <div class="nav-container">
+    <a href="${pageContext.request.contextPath}/catalog" class="logo">
+      Bookstore<sup>&reg;</sup>
+    </a>
+
+    <nav>
+      <ul class="nav-links">
+        <li><a href="${pageContext.request.contextPath}/catalog" class="nav-link ${pageContext.request.requestURI.endsWith('catalog.jsp') ? 'active' : ''}">Catalog</a></li>
+        <li>
+          <a href="${pageContext.request.contextPath}/cart" class="nav-link ${pageContext.request.requestURI.endsWith('cart.jsp') ? 'active' : ''}">
+            Cart <span class="cart-badge">${empty sessionScope.cart ? 0 : sessionScope.cart.size()}</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <a href="${pageContext.request.contextPath}/catalog#collection" class="btn-nav-journey liquid-glass">
+      Explore Books &rarr;
+    </a>
+  </div>
 </header>
-<main class="container">

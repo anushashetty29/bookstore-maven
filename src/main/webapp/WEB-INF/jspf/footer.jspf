@@ -1,4 +1,15 @@
-</main>
 <footer class="site-footer">
-  <p>&copy; 2026 Online Bookstore - Build Automation Practical</p>
+  <div class="footer-container">
+    <div>
+      <span style="font-family: var(--font-display); font-size: 1.25rem; color: #fff;">Bookstore<sup>&reg;</sup></span>
+      <p style="margin-top: 0.25rem; font-size: 0.8rem; color: var(--muted-foreground);">Curated Architecture &amp; Engineering Volumes</p>
+    </div>
+    <div class="footer-nav">
+      <a href="${pageContext.request.contextPath}/catalog">Catalog</a>
+      <a href="${pageContext.request.contextPath}/cart">Cart</a>
+    </div>
+    <div>
+      &copy; 2026 Bookstore. Built with Jakarta Servlet &amp; JSP.
+    </div>
+  </div>
 </footer>
